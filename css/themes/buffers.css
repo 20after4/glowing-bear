@@ -2132,6 +2132,17 @@ input[type=text], input[type=password], #sendMessage, .badge, .btn-send, .btn-se
 #topbar {
     background: transparent;
 }
+
 #topbar .title {
     display: none;
+}
+
+.phab-T:before {
+    content: "\f13d";
+}
+.phab-P:before {
+    content: "\f24a";
+}
+.phab-M:before {
+    content: "\f083";
 }

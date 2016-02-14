@@ -202,4 +202,19 @@ weechat.filter('prefixlimit', function() {
     };
 });
 
+weechat.filter('phablinks', function() {
+    return function(input, chars) {
+        if (!input) {
+            return input;
+        }
+	var RE_PHAB = /^([^/;]+)?\b([TMP])(\d\d\d+)(#\d+)?\b/g;
+	var link = '$1<a href="https://phabricator.wikimedia.org/$2$3$4" target="_blank"><i class="fa phab-$2"></i> $2$3$4</a>';
+	var output = input.replace(RE_PHAB, link);
+//	if (input !== output) {
+//		console.log(input, output);
+//	}
+	return output;
+    };
+});
+
 })();
