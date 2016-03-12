@@ -65,7 +65,7 @@
         <strong>Secure connection error</strong> A secure connection with the WeeChat relay could not be initiated. This is most likely because your browser does not trust your relay's certificate. Please read the encryption instructions below!
       </div>
       <div class="alert alert-danger" ng-show="securityError">
-        <strong>Secure connection error</strong> Unable to connect to unencrypted relay when your are connecting to Glowing Bear over HTTPS. Please use an encrypted relay or load the page without using HTTPS.
+        <strong>Secure connection error</strong> Unable to connect to unencrypted relay when you are connecting to Glowing Bear over HTTPS. Please use an encrypted relay or load the page without using HTTPS.
       </div>
       <div class="panel-group accordion">
         <div class="panel" data-state="active">
@@ -147,6 +147,7 @@
                 <li><kbd>ALT-n</kbd>: Toggle nicklist</li>
                 <li><kbd>ALT-l</kbd>: Focus on input bar</li>
                 <li><kbd>ALT-[0-9]</kbd>: Switch to buffer number N</li>
+                <li><kbd>ALT-↑/↓</kbd>: Switch to buffer above/below</li>
                 <li><kbd>ALT-a</kbd>: Focus on next buffer with activity</li>
                 <li><kbd>ALT-&lt;</kbd>: Switch to previous active buffer</li>
                 <li><kbd>ALT-g</kbd>: Focus on buffer list filter</li>
@@ -322,7 +323,7 @@ $ openssl req -nodes -newkey rsa:4096 -keyout relay.pem -x509 -days 365 -out rel
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" ng-click="closeModal($event)" aria-hidden="true">&times;</button>
-            <span class="pull-right version">Glowing Bear version 0.5.3-dev</span>
+            <span class="pull-right version">Glowing Bear version 0.6.1-dev</span>
             <h4 class="modal-title">Settings</h4>
             <p>Settings will be stored in your browser.</p>
           </div>
