@@ -2132,8 +2132,17 @@ input[type=text], input[type=password], #sendMessage, .badge, .btn-send, .btn-se
     background: transparent;
 }
 
-#topbar .title {
+/*#topbar .title {
     display: none;
+}*/
+
+#content > #bufferlines {
+  top: 32px;
+  bottom: 35px;
+  position: absolute;
+  padding-top: 5px;
+  overflow-y: scroll;
+  height: auto;
 }
 
 .phab-T:before {
