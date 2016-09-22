@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Glowing Bear
+Exec=glowing-bear
+Icon=glowing-bear
+Name[en_US]=Glowing Bear
+Category=Internet

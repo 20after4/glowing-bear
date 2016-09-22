@@ -78,12 +78,12 @@ weechat.factory('notifications', ['$rootScope', '$log', 'models', 'settings', fu
             notifications.push(notification);
 
             // Cancel notification automatically
-            var timeout = 15*1000;
-            notification.onshow = function() {
-                setTimeout(function() {
-                    notification.close();
-                }, timeout);
-            };
+            //var timeout = 15*1000;
+            //notification.onshow = function() {
+                //setTimeout(function() {
+                //    notification.close();
+                //}, timeout);
+            //};
 
             // Click takes the user to the buffer
             notification.onclick = function() {

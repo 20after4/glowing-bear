@@ -217,10 +217,8 @@
                 __dirname + '/assets/img/glowing_bear_128x128.png');
             mainWindow.setIcon(default_favicon);
             ipcMain.on('favicon', function(event, favicons) {
-
                 var img = nativeImage.createFromDataURL(favicons[0]);
                 mainWindow.setIcon(img);
-                mainWindow.show();
             });
         }
 
@@ -240,6 +238,9 @@
                 } else {
                     mainWindow.setOverlayIcon(null, '');
                 }
+            }
+            else if (process.platform === "linux" && app.unityLauncher) {
+                app.unityLauncher.setBadgeCount(arg);
             }
         });
 
