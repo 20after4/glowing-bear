@@ -21,7 +21,7 @@ weechat.controller('WeechatCtrl', ['$rootScope', '$scope', '$store', '$timeout',
     };
 
     $scope.command = '';
-    $scope.themes = ['dark', 'light', 'black', 'dark-spacious'];
+    $scope.themes = ['dark', 'light', 'black', 'dark-spacious', 'blue', 'base16-default', 'base16-light', 'base16-mocha', 'base16-solarized-dark', 'base16-solarized-light'];
 
     // Initialise all our settings, this needs to include all settings
     // or else they won't be saved to the localStorage.
@@ -678,6 +678,11 @@ weechat.controller('WeechatCtrl', ['$rootScope', '$scope', '$store', '$timeout',
             // Always show core buffer in the list (issue #438)
             // Also show server buffers in hierarchical view
             if (buffer.fullName === "core.weechat" || (settings.orderbyserver && buffer.type === 'server')) {
+                return true;
+            }
+
+            // Always show pinned buffers
+            if (buffer.pinned) {
                 return true;
             }
             return (buffer.unread > 0 || buffer.notification > 0) && !buffer.hidden;
